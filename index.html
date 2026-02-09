@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mini Healthcare Support App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- FORM CARD -->
+    <div class="card">
+        <h1>🩺 Healthcare Support</h1>
+        <p class="subtitle">Submit a patient support request</p>
+
+        <form id="supportForm">
+            <label>Patient Name</label>
+            <input type="text" id="name" required>
+
+            <label>Age</label>
+            <input type="number" id="age" required>
+
+            <label>Contact Number</label>
+            <input type="text" id="contact" required>
+
+            <label>Issue Type</label>
+            <select id="issue" required>
+                <option value="">Select</option>
+                <option>Medical Help</option>
+                <option>Mental Health</option>
+                <option>Medicine Support</option>
+                <option>Emergency</option>
+            </select>
+
+            <label>Description</label>
+            <textarea id="description" required></textarea>
+
+            <button type="submit">Submit Request</button>
+        </form>
+    </div>
+
+    <!-- SUMMARY CARD -->
+    <div class="card result-card">
+        <h2>📄 Auto-Generated Summary</h2>
+        <p id="summary">Submit the form to see the summary.</p>
+    </div>
+
+    <!-- RECENT REPORTS CARD -->
+    <div class="card result-card">
+        <h2>🕒 Recent Reports</h2>
+        <ul id="recentReports"></ul>
+    </div>
+
+</div>
+
+<!-- CHATBOT -->
+<div id="chatbot-toggle">💬</div>
+
+<div id="chatbot-popup">
+    <div class="chat-header">
+        🤖 Support Bot
+        <span id="close-chat">✖</span>
+    </div>
+
+    <div class="chat-box" id="chatBox">
+	<div class="message bot">
+    <div class="bubble">
+        Hello 👋 I can help with healthcare support questions.
+        <br><br>
+        You can ask things like:
+        <br>• Medical help
+        <br>• Mental health support
+        <br>• Contacting the NGO
+    </div>
+</div>
+    </div>
+
+    <div class="chat-input">
+        <input type="text" id="userInput" placeholder="Type message...">
+        <button type="button" onclick="sendMessage()">Send</button>
+    </div>
+</div>
+
+<!-- SUCCESS POPUP -->
+<div id="success-overlay">
+    <div class="success-popup">
+        <div class="success-icon">✔</div>
+        <h3>Request Submitted</h3>
+        <p>Your request has been saved.</p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
