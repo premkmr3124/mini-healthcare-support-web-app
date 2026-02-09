@@ -31,3 +31,5 @@ NGOs can use this system to:
 - Quickly understand patient needs via summaries
 - Track recent healthcare requests
 - Improve response time during emergencies
+## Live Demo
+https://mini-healthcare-support-web-app-two.vercel.app/
